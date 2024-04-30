@@ -47,3 +47,16 @@ module.exports.thisFunc = async (req, res)=>{
     }
     f()
 }
+
+thistest = {
+    c:"local",
+    o:["have some string","a","ad"],
+    b:function(){
+        console.log(this.o,"anbovfe---")
+        this.o.map(function(i,j){
+            console.log(i,j,this.c,"also print local from above one")
+        }, this )
+
+        console.log("this with in a fucntion in an object",this,"=====" ,this.o)
+    }
+}
